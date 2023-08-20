@@ -13,25 +13,28 @@
   --modal-background: #fcfcfc;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* скидання стилів */
 h1, h2, h3, h4, h5, h6, p {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
 .container {
-  width: 1158px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  max-width: 1158px;
+  padding: 0;
+  margin: auto;
   outline: 5px solid tomato;
   /*outline-offset: 20px;*/
 }
@@ -41,6 +44,22 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+button {
+  display: block;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-white-color, #ffffff);
+}
+
+
 
 /*styles*/
 /*
@@ -133,6 +152,8 @@ body {
 }
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 
@@ -304,7 +325,7 @@ body {
 }
 
 
-
+/* visual hidden */
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -316,4 +337,10 @@ body {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
+}
+
+.fiter-portfolio-container .list-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
