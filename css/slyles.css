@@ -215,8 +215,16 @@ body {
 }
 
 /*PORTFOLIO*/
+.portfolio-section {
+  padding: 96px 0 120px 0;
+}
 .filter .filter-list {
   list-style-type: none;
+
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 72px;
 }
 .filter-list .button-nav {
   font-family: "Roboto", sans-serif;
@@ -227,6 +235,10 @@ body {
   background-color: var(--light-color);
   color: var(--primary-brand);
   cursor: pointer;
+
+  padding: 12px 24px;
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
 }
 
 .filter-list .button-nav:hover,
@@ -234,6 +246,7 @@ body {
 .filter-list .button-nav:focus {
   background-color: var(--pressed-state);
   color: var(--white-background);
+  border: 1px solid transparent;
 }
 
 .list-portfolio {
@@ -246,6 +259,7 @@ body {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--dark-color);
+    margin-bottom: 8px;
 }
 
 .list-portfolio .index-text{
@@ -254,6 +268,24 @@ body {
   letter-spacing: 0.02em;
   color: var(--text-color);
 }
+
+.fiter-portfolio-container .list-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+.list-img-portfolio {
+  width: calc((100% - 48px) / 3)
+}
+
+.portfolio-content {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+}
+
+
 
 /*section 1*/
 .benefits {
@@ -399,11 +431,7 @@ body {
   margin: -1px;
 }
 
-.fiter-portfolio-container .list-portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+
 
 
 .footer-container {
