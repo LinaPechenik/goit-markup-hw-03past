@@ -35,7 +35,7 @@ ul {
   max-width: 1158px;
   padding: 0;
   margin: auto;
-  outline: 5px solid tomato;
+  /*outline: 5px solid tomato;
   /*outline-offset: 20px;*/
 }
 
@@ -51,8 +51,10 @@ button {
 
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;  
+  border-bottom: 1px solid #e7e9fc;
 }
+
 .nav {
   display: flex;
   align-items: center;
@@ -161,8 +163,12 @@ body {
 .hero {
   background-color: var(--dark-color);
 }
+.hero-section {
+  padding: 188px 0;
+}
+
 .hero .main-title {
-  width: 496px;
+  max-width: 496px;
   margin: 0 auto;
   padding-top: 212px;
   margin-bottom: 48px;
@@ -183,6 +189,12 @@ body {
   letter-spacing: 0.04em;
   cursor: pointer;
   padding: 16px 32px;
+
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
 }
 .button-hero:hover ,
 .button-hero:focus {
@@ -233,6 +245,8 @@ body {
 /*section 1*/
 .benefits .benefits-list {
   list-style-type: none;
+  display: flex;
+  gap: 24px;
 }
 .benefits .subtitle {
   margin-bottom: 8px;
@@ -247,6 +261,11 @@ body {
   letter-spacing: 0.32px;
   color: var(--text-color);
 }
+
+.benefits-parts {
+  width: calc((100% - 48px) / 3)
+}
+
 /*section 2*/
 .section-title {
   margin: 0 auto;
@@ -254,8 +273,14 @@ body {
   width: 323px;
 }
 
+.actions {
+  padding-bottom: 120px;
+}
+
 .actions .actions-list {
   list-style-type: none;
+  display: flex;
+  gap: 24px;
 }
 .actions .title-text {
   font-size: 36px;
@@ -266,6 +291,10 @@ body {
   color: var(--hero-background);
   text-align: center;
 }
+.actions-list-img {
+  width: calc((100% - 48px) / 3)
+}
+
 .team-block .title-text {
   padding-top: 120px;
   font-size: 36px;
@@ -282,6 +311,8 @@ body {
 .team-block .team-list {
   list-style-type: none;
   background-color: var(--white-background);
+  display: flex;
+  gap: 24px;
 }
 .team-block .subtitle {
   margin-top: 32px;
@@ -299,14 +330,15 @@ body {
 }
 .team-block .picture {
   background-color: var(--white-background);
+  width: calc((100% - 48px) / 4)
 }
 
 /*footer*/
 .footer {
   background-color: var(--dark-color);
+  padding: 100px 0;
 }
 .footer .logo {
-  margin-bottom: 17.5px;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -314,6 +346,9 @@ body {
   letter-spacing: 0.54px;
   text-transform: uppercase;
   color: var(--primary-brand);
+
+  display: inline-block;
+  margin-bottom: 16px;
 }
 .footer .web-accent {
   color: var(--light-color);
@@ -343,4 +378,14 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+
+.footer-container {
+
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
 }
